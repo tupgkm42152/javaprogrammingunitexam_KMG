@@ -21,36 +21,36 @@
         - `Person`: `String name`, `String email`, getter와 setter 메서드, `toString` 메서드
         - `Member`: `String memberId`, getter와 setter 메서드, `toString` 메서드
      
-        public class Person {
-        	String name;
-        	String email;
-        	public String getterName() {
-        		return name;
-        	}
-        	public String getterEmail() {
-	        	return email;
-        	}
-        	public void setter(String name, String email) {
-        		this.name = name;
-        		this.email = email;
-        	}
-        	public String toString() {
-        		return email;
-        	}
-      }
+public class Person {
+    String name;
+    String email;
+    public String getterName() {
+        return name;
+    }
+    public String getterEmail() {
+        return email;
+    }
+    public void setter(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+    public String toString() {
+        return email;
+    }
+}
 
-      public class Member extends Person {
-		String memeberId;
-		public String getter() {
-			return memeberId;
-		}
-		public void setter(String memeberId) {
-			this.memeberId = memeberId;
-		}
-		public String toString() {
-			return email;
-		}
-	}
+public class Member extends Person {
+    String memeberId;
+    public String getter() {
+        return memeberId;
+    }
+    public void setter(String memeberId) {
+	this.memeberId = memeberId;
+    }
+    public String toString() {
+	return email;
+    }
+}
 
 2. **도서 및 대여 기록 클래스 구현** (10점)
     - `Book` 클래스를 작성하시오. 이 클래스는 `String bookId`, `String title`, `String author`, `String category`, `boolean isAvailable` 필드를 가져야 합니다.
