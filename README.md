@@ -52,6 +52,7 @@ public class Member extends Person {
     }
 }
 
+
 2. **도서 및 대여 기록 클래스 구현** (10점)
     - `Book` 클래스를 작성하시오. 이 클래스는 `String bookId`, `String title`, `String author`, `String category`, `boolean isAvailable` 필드를 가져야 합니다.
     - `BorrowRecord` 클래스를 작성하시오. 이 클래스는 `Book book`, `Member member`, `LocalDate borrowDate`, `LocalDate returnDate` 필드를 가져야 합니다.
