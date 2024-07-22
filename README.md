@@ -20,6 +20,37 @@
     - `Person` 클래스를 작성하고, 이를 상속하는 `Member` 클래스를 작성하시오. 각 클래스는 다음과 같은 필드와 메서드를 가져야 합니다.
         - `Person`: `String name`, `String email`, getter와 setter 메서드, `toString` 메서드
         - `Member`: `String memberId`, getter와 setter 메서드, `toString` 메서드
+     
+        public class Person {
+        	String name;
+        	String email;
+        	public String getterName() {
+        		return name;
+        	}
+        	public String getterEmail() {
+	        	return email;
+        	}
+        	public void setter(String name, String email) {
+        		this.name = name;
+        		this.email = email;
+        	}
+        	public String toString() {
+        		return email;
+        	}
+      }
+
+      public class Member extends Person {
+		String memeberId;
+		public String getter() {
+			return memeberId;
+		}
+		public void setter(String memeberId) {
+			this.memeberId = memeberId;
+		}
+		public String toString() {
+			return email;
+		}
+	}
 
 2. **도서 및 대여 기록 클래스 구현** (10점)
     - `Book` 클래스를 작성하시오. 이 클래스는 `String bookId`, `String title`, `String author`, `String category`, `boolean isAvailable` 필드를 가져야 합니다.
@@ -37,16 +68,50 @@
 
         // 기본 생성자
         // code를 작성하세요
+        public Book() { }
         
         // 모든 필드를 초기화하는 생성자
         // code를 작성하세요
+        public Book(String bookId2, String title2, String author2, String category2, boolean isAvailable2) { 
+        	bookId = bookId2;
+        	title = title2;
+        	author = author2;
+	 	    category = category2;
+	    	isAvailable = isAvailable2;
+        }
 
         // getter와 setter 메서드
         // code를 작성하세요
+    	String getterBookId() {
+			return bookId;
+		}
+		String getterTitle() {
+			return title;
+		}
+		String getterAuthor() {
+			return author;
+		}
+		String getterCategory() {
+			return category;
+		}
+		boolean getterIsAvailable() {
+			return isAvailable;
+		}
         
-        // toString 메서드
+        void setter(String bookId, String title, String author, String category, boolean isAvailable) {
+			this.bookId = bookId;
+			this.title = title;
+			this.author = author;
+			this.category = category;
+			this.isAvailable = isAvailable;
+
+		}
+    	// toString 메서드
         // code를 작성하세요
-        
+  	    @Override
+	    public String toString() {
+	        return "";
+	    }
     }
 
     public class BorrowRecord {
@@ -57,16 +122,46 @@
 
         // 기본 생성자
         // code를 작성하세요
+        public BorrowRecord() { }
         
         // 모든 필드를 초기화하는 생성자
-        // code를 작성하세요        
+        // code를 작성하세요
+        public BorrowRecord(Book book2, Member member2, LocalDate borrowDate2, LocalDate returnDate2) {
+		    book = book2;
+		    member = member2;
+		    borrowDate = borrowDate2;
+		    returnDate = returnDate2;
+	    }
 
         // getter와 setter 메서드
         // code를 작성하세요        
 
+        
+        Book getterBook () {
+		    return book;
+	    }
+    	Member getterMember() {
+	    	return member;
+    	}
+	    LocalDate getterBorrowDate() {
+	    	return borrowDate;
+    	}
+	    LocalDate getterReturnDate() {
+		    return returnDate;
+	    }
+	
+    	void setter(Book book, Member member, LocalDate borrowDate, LocalDate returnDate) {
+	    	this.book = book;
+		    this.book = book;
+	    	this.borrowDate = borrowDate;
+		    this.returnDate = returnDate;
+    	}
         // toString 메서드
         // code를 작성하세요
-        
+        @Override
+	    public String toString() {
+	    	return "";
+    	}
     }
     ```
 
@@ -86,6 +181,7 @@
 
         // 기본 생성자
         // code를 작성하세요
+        public Library() { }
 
         // 아이템 추가 메서드
         // code를 작성하세요
